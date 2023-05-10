@@ -1,0 +1,25 @@
+ALGORITHM gomycode;
+VAR
+a1,a2,a3:INTEGER;
+phrase:STRING;
+BEGIN
+	a1:=0;
+	a2:=1;
+	a3:=0;               
+	repeat
+	writeln('donner une phrase');
+	readln(a1,a2,a3);
+WHILE (phrase(a1)=" ") DO
+    a2:=a2+1;
+    END_WHILE
+WHILE (phrase(a1)="a,e,i,o,u et y") DO
+     a3:=a3+1;
+    END_WHILE
+	a1:=a1+1;
+	until(phrase=".");
+	writeln('la longueur de la phrase',a1+1);
+	writeln('le nombre de mot',a2);
+	writeln('le nombre de voyelle',a3);
+end.
+	
+	
